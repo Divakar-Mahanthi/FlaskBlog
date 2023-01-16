@@ -71,6 +71,3 @@ def delete(pid):
     cur.close()
     con.close()
     return render_template("delete.html",data=title[0])
-
-if __name__=='__main__':
-    app.run(debug='True')
