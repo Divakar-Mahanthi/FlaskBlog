@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table,td
+        {
+            border: 1px solid black;
+        }
+    </style>
+    <body align="center">
+        <h1>
+            Flask Blog
+        </h1>
+        <br>
+        <table align="center" style="width:50%">
+        {% for x in data %}
+            <tr align="left">
+                <th>
+                    {{x[1]}}
+                </th>
+            </tr>
+            <tr align="left" style="height:100px">
+                <td style="width:100%">
+                    {{x[2]}}
+                </td>
+                <td>
+                    <a href="{{url_for('edit',pid=x[0])}}" style="font-size: 100%">edit?</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </table>
+        <br><br>
+        <a href="{{url_for('create')}}">create post?</a>
+    </body>
+</html>

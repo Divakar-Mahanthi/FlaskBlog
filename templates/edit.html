@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <a href="{{url_for('index')}}">
+            back to home?
+        </a>
+        <h2 align="center">
+            EDIT POST '{{data[1]}}'
+        </h2>
+        <br>
+        <form method="post" align="center">
+            <table align="center">
+            <tr align="left">
+                <th>
+                    TITLE:
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="title">
+                </td>
+            </tr>
+            <tr align="left">
+                <th>
+                    CONTENT:
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="content">
+                </td>
+            </tr>
+            </table>
+            <br>
+            <input type="submit">
+            <br><br>
+            <a href="{{url_for('delete',pid=data[0])}}">delete this post?</a>
+        </form>
+    </body>
+</html>
